@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8xr2m5k7h3np"]
+
+[ext_resource type="Script" path="res://scenes/character/player_character.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bk4m2x6n8y1qp" path="res://assets/textures/shadow_blob.png" id="2_shadow"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
+radius = 0.2
+height = 0.8
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1"]
+radius = 0.1
+
+[node name="PlayerCharacter" type="CharacterBody3D"]
+script = ExtResource("1_script")
+
+[node name="Sprite" type="Sprite3D" parent="."]
+pixel_size = 0.0095
+billboard = 2
+texture_filter = 0
+alpha_cut = 2
+shaded = true
+double_sided = true
+offset = Vector2(0, 32)
+
+[node name="ShadowCaster" type="ShapeCast3D" parent="."]
+shape = SubResource("SphereShape3D_1")
+target_position = Vector3(0, -5, 0)
+collision_mask = 1
+
+[node name="BlobShadow" type="Decal" parent="ShadowCaster"]
+size = Vector3(0.5, 1, 0.5)
+texture_albedo = ExtResource("2_shadow")
+modulate = Color(0, 0, 0, 0.4)
+cull_mask = 1
+upper_fade = 0.0
+lower_fade = 0.1
+
+[node name="CollisionShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_1")
