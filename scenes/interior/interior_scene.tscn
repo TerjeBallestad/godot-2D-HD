@@ -41,20 +41,20 @@ shadow_enabled = true
 [node name="Lamps" type="Node3D" parent="Lighting" unique_id=1597192297]
 
 [node name="TableLamp" type="OmniLight3D" parent="Lighting/Lamps" unique_id=2065539924]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3709736, 1, 0)
 light_color = Color(1, 0.85, 0.65, 1)
 light_energy = 0.245
 omni_attenuation = 1.2
 
 [node name="FloorLamp" type="OmniLight3D" parent="Lighting/Lamps" unique_id=370763913]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1.2, 0.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47949803, 1.2, 0.9)
 light_color = Color(1, 0.85, 0.65, 1)
 light_energy = 0.305
 omni_range = 4.0
 omni_attenuation = 1.2
 
 [node name="Fireplace" type="OmniLight3D" parent="Lighting" unique_id=389766960]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5297904, 0.5, 0)
 light_color = Color(1, 0.65, 0.35, 1)
 light_energy = 0.32
 omni_range = 3.0
@@ -93,30 +93,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
 
 [node name="WallBack1" parent="Assets/Room" unique_id=1797603548 instance=ExtResource("3_wall")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48833704, 2.3841858e-07, -2.003965)
 
 [node name="WallBack2" parent="Assets/Room" unique_id=620581432 instance=ExtResource("3_wall")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51166296, 2.3841858e-07, -2.003965)
 
 [node name="WallBack3" parent="Assets/Room" unique_id=1276064805 instance=ExtResource("3_wall")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.511663, 2.3841858e-07, -2.003965)
 
 [node name="WallWindowLeft" parent="Assets/Room" unique_id=1650507126 instance=ExtResource("4_wallwindow")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -1.5, 0, -1)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.98833704, 2.3841858e-07, -0.4956693)
 
 [node name="WallLeft1" parent="Assets/Room" unique_id=1947268832 instance=ExtResource("3_wall")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -1.5, 0, 0)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.98833704, 2.3841858e-07, 0.5043307)
 
 [node name="WallLeft2" parent="Assets/Room" unique_id=508603068 instance=ExtResource("3_wall")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -1.5, 0, 1)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.98833704, 2.3841858e-07, 1.5043306)
 
 [node name="WallCornerBackLeft" parent="Assets/Room" unique_id=1375889595 instance=ExtResource("5_wallcorner")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -1.5)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.48823047, 2.3841858e-07, -2.0453587)
 
 [node name="Furniture" type="Node3D" parent="Assets" unique_id=163188262]
 
 [node name="Sofa" parent="Assets/Furniture" unique_id=1840022449 instance=ExtResource("6_sofa")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.8, 0, 0)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.42761964, 0, 0)
 
 [node name="CoffeeTable" parent="Assets/Furniture" unique_id=957487757 instance=ExtResource("8_coffeetable")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
@@ -128,13 +128,13 @@ transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.8, 0, -0.6)
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.8, 0, 0.6)
 
 [node name="SideTable1" parent="Assets/Furniture" unique_id=1731733603 instance=ExtResource("9_sidetable")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, -0.7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12265527, 0, -0.7)
 
 [node name="SideTable2" parent="Assets/Furniture" unique_id=798658616 instance=ExtResource("9_sidetable")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0.7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12265527, 0, 0.7)
 
 [node name="FloorLamp" parent="Assets/Furniture" unique_id=1540549167 instance=ExtResource("10_floorlamp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0, 0.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8256717, 0.05391717, 0.9)
 
 [node name="Rug" parent="Assets/Furniture" unique_id=1385996068 instance=ExtResource("11_rug")]
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, -0.8018414, 0.05626882, 0.61581826)
