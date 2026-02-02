@@ -17,23 +17,13 @@
 
 [sub_resource type="Environment" id="Environment_1"]
 background_mode = 1
-background_color = Color(0.08, 0.08, 0.1, 1)
+background_color = Color(0.15, 0.15, 0.18, 1)
 ambient_light_source = 2
-ambient_light_color = Color(0.4, 0.35, 0.3, 1)
-ambient_light_energy = 0.25
+ambient_light_color = Color(0.6, 0.55, 0.5, 1)
+ambient_light_energy = 0.4
 tonemap_mode = 3
 tonemap_exposure = 1.0
 tonemap_white = 6.0
-ssao_enabled = true
-ssao_radius = 0.5
-ssao_intensity = 1.0
-ssao_power = 1.2
-glow_enabled = true
-glow_intensity = 0.15
-glow_strength = 0.8
-glow_bloom = 0.0
-glow_blend_mode = 3
-glow_hdr_threshold = 1.0
 
 [node name="InteriorScene" type="Node3D" unique_id=1594013898]
 script = ExtResource("1_script")
@@ -54,21 +44,21 @@ shadow_enabled = true
 [node name="TableLamp" type="OmniLight3D" parent="Lighting/Lamps" unique_id=2065539924]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1, 0)
 light_color = Color(1, 0.85, 0.65, 1)
-light_energy = 0.8
+light_energy = 1.0
 omni_range = 5.0
 omni_attenuation = 1.2
 
 [node name="FloorLamp" type="OmniLight3D" parent="Lighting/Lamps" unique_id=370763913]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1.2, 0.9)
 light_color = Color(1, 0.85, 0.65, 1)
-light_energy = 0.6
+light_energy = 0.8
 omni_range = 4.0
 omni_attenuation = 1.2
 
 [node name="Fireplace" type="OmniLight3D" parent="Lighting" unique_id=389766960]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0.5, 0)
 light_color = Color(1, 0.65, 0.35, 1)
-light_energy = 1.0
+light_energy = 1.2
 omni_range = 3.0
 omni_attenuation = 1.5
 
