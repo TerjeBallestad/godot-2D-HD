@@ -28,8 +28,21 @@ tonemap_white = 6.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_1"]
 size = Vector3(4, 0.1, 4)
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_1"]
+vertices = PackedVector3Array()
+polygons = []
+agent_height = 1.0
+agent_radius = 0.3
+cell_size = 0.1
+cell_height = 0.1
+geometry_parsed_geometry_type = 1
+geometry_source_geometry_mode = 0
+
 [node name="InteriorScene" type="Node3D" unique_id=1594013898]
 script = ExtResource("1_script")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=932483073]
 environment = SubResource("Environment_1")
@@ -153,10 +166,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5883411, 0, 0.62228954)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.25, 0)
 
 [node name="Player" parent="." unique_id=1018124595 instance=ExtResource("15_player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4562309, 0.15088752, -0.10246208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.97321534, 0.08013752, 0.19143519)
 
 [node name="FloorCollider" type="StaticBody3D" parent="." unique_id=2116644496]
-collision_layer = 1
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FloorCollider" unique_id=1825101688]
