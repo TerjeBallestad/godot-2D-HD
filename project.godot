@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="godot-2d-hd"
+run/main_scene="uid://bq8x2ky5l6m1p"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

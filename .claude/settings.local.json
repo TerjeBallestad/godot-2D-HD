@@ -24,7 +24,9 @@
       "WebSearch",
       "Bash(tree:*)",
       "Bash(git -C:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git -C /Users/godstemning/Projects/godot-2D-HD status --short)",
+      "Bash(git -C /Users/godstemning/Projects/godot-2D-HD log --oneline -3)"
     ]
   }
 }
