@@ -41,7 +41,7 @@ Plans:
 **Requirements**: SPRT-01, SPRT-02
 **Success Criteria** (what must be TRUE):
   1. Player character sprite is visible in the scene as a Sprite3D
-  2. Sprite billboards to always face the camera regardless of camera angle
+  2. Sprite billboards horizontally to face camera (Y-axis only, stays upright)
   3. Sprite displays with crisp nearest-neighbor filtering (no blurry interpolation)
   4. Sprite integrates visually with the 3D environment (correct scale and positioning)
 **Plans**: 1 plan
