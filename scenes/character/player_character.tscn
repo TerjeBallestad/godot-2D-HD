@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djoyiihskjwds" path="res://scenes/character/player_character.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://byabuidfqgvtd" path="res://assets/textures/Elling-New-1.png" id="2_g4tfd"]
-[ext_resource type="Texture2D" uid="uid://cu1fmmfnp0hml" path="res://assets/textures/shadow_blob.png" id="2_shadow"]
+[ext_resource type="Texture2D" uid="uid://by2jyr4ih7lgt" path="res://assets/textures/Sprite-0001.png" id="3_g4tfd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1"]
 radius = 0.1
@@ -26,11 +26,10 @@ texture = ExtResource("2_g4tfd")
 [node name="ShadowCaster" type="ShapeCast3D" parent="." unique_id=565235107]
 shape = SubResource("SphereShape3D_1")
 target_position = Vector3(0, -5, 0)
-collision_mask = 1
 
 [node name="BlobShadow" type="Decal" parent="ShadowCaster" unique_id=1092147265]
-size = Vector3(3, 1, 3)
-texture_albedo = ExtResource("2_shadow")
+size = Vector3(0.35, 1, 0.35)
+texture_albedo = ExtResource("3_g4tfd")
 modulate = Color(0, 0, 0, 0.4)
 upper_fade = 0.0
 lower_fade = 0.1
@@ -39,3 +38,9 @@ cull_mask = 1
 [node name="CollisionShape" type="CollisionShape3D" parent="." unique_id=1652347703]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46500152, 0)
 shape = SubResource("CapsuleShape3D_1")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_desired_distance = 0.3
+target_desired_distance = 0.3
+max_speed = 1.5
+avoidance_enabled = false
