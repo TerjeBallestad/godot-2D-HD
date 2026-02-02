@@ -27,9 +27,9 @@ Requirements for the evaluation prototype. Each maps to roadmap phases.
 
 ### Controls
 
-- [ ] **CTRL-01**: Click-to-move character navigation
-- [ ] **CTRL-02**: Camera orbit rotation
-- [ ] **CTRL-03**: Camera zoom
+- [x] **CTRL-01**: Click-to-move character navigation
+- [x] **CTRL-02**: Camera orbit rotation
+- [x] **CTRL-03**: Camera zoom
 
 ## v2 Requirements
 
@@ -69,9 +69,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ENV-02 | Phase 1: Foundation | Complete |
 | SPRT-01 | Phase 2: Character | Complete |
 | SPRT-02 | Phase 2: Character | Complete |
-| CTRL-01 | Phase 3: Controls | Pending |
-| CTRL-02 | Phase 3: Controls | Pending |
-| CTRL-03 | Phase 3: Controls | Pending |
+| CTRL-01 | Phase 3: Controls | Complete |
+| CTRL-02 | Phase 3: Controls | Complete |
+| CTRL-03 | Phase 3: Controls | Complete |
 | REND-02 | Phase 4: Atmosphere | Pending |
 | REND-03 | Phase 4: Atmosphere | Pending |
 | REND-04 | Phase 4: Atmosphere | Pending |

@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Interior scene and WorldEnvironment setup
 - [x] **Phase 2: Character** - Sprite3D player with pixel-art filtering
-- [ ] **Phase 3: Controls** - Click-to-move navigation and camera controls
+- [x] **Phase 3: Controls** - Click-to-move navigation and camera controls
 - [ ] **Phase 4: Atmosphere** - Post-processing, volumetric fog, and lighting
 - [ ] **Phase 5: Tilt-Shift** - Depth-based DoF shader with character-following focal point
 
@@ -61,8 +61,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Click-to-move navigation with NavigationAgent3D and eased motion
-- [ ] 03-02-PLAN.md — Camera gimbal with orbit rotation (45-degree snapping) and zoom controls
+- [x] 03-01-PLAN.md — Click-to-move navigation with NavigationAgent3D and eased motion
+- [x] 03-02-PLAN.md — Camera gimbal with orbit rotation (45-degree snapping) and zoom controls
 
 ### Phase 4: Atmosphere
 **Goal**: Scene has the dreamy, atmospheric look characteristic of HD-2D through post-processing and lighting
@@ -102,6 +102,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | 2026-02-02 |
 | 2. Character | 1/1 | Complete | 2026-02-02 |
-| 3. Controls | 0/2 | Planned | - |
+| 3. Controls | 2/2 | Complete | 2026-02-02 |
 | 4. Atmosphere | 0/2 | Not started | - |
 | 5. Tilt-Shift | 0/1 | Not started | - |
