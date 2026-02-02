@@ -47,7 +47,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 02-01-PLAN.md — Player character Sprite3D with Y-axis billboard, blob shadow, and scene integration
+- [x] 02-01-PLAN.md — Player character Sprite3D with Y-axis billboard, blob shadow, and scene integration
 
 ### Phase 3: Controls
 **Goal**: User can navigate the character and adjust camera to evaluate the scene from different perspectives
@@ -101,7 +101,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | 2026-02-02 |
-| 2. Character | 0/1 | Planned | - |
+| 2. Character | 1/1 | Complete | 2026-02-02 |
 | 3. Controls | 0/2 | Not started | - |
 | 4. Atmosphere | 0/2 | Not started | - |
 | 5. Tilt-Shift | 0/1 | Not started | - |
