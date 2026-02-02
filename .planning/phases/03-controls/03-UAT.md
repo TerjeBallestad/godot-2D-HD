@@ -1,5 +1,5 @@
 ---
-status: complete
+status: diagnosed
 phase: 03-controls
 source: [03-01-SUMMARY.md, 03-02-SUMMARY.md]
 started: 2026-02-02T21:50:00Z
@@ -64,11 +64,14 @@ skipped: 3
 ## Gaps
 
 - truth: "Left-click on the floor moves character toward that position"
-  status: failed
+  status: fixed
   reason: "User reported: Left click but nothing happens"
   severity: major
   test: 1
-  root_cause: ""
-  artifacts: []
-  missing: []
+  root_cause: "FloorCollider missing explicit collision_layer=1, raycast with collision_mask=1 couldn't detect floor"
+  artifacts:
+    - path: "scenes/interior/interior_scene.tscn"
+      issue: "FloorCollider had collision_mask=0 but no collision_layer specified"
+  missing:
+    - "Add collision_layer = 1 to FloorCollider"
   debug_session: ""

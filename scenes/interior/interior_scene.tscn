@@ -170,6 +170,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.25, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.97321534, 0.08013752, 0.19143519)
 
 [node name="FloorCollider" type="StaticBody3D" parent="." unique_id=2116644496]
+collision_layer = 1
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FloorCollider" unique_id=1825101688]
