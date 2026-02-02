@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-02)
 
 ## Current Position
 
-Phase: 2 of 5 (Character)
-Plan: 1 of 1 in current phase (complete)
-Status: Phase complete, ready for Phase 3
-Last activity: 2026-02-02 — Completed 02-01-PLAN.md (Player Character)
+Phase: 3 of 5 (Controls)
+Plan: 1 of 2 in current phase
+Status: In progress
+Last activity: 2026-02-02 — Completed 03-01-PLAN.md (Click-to-Move Navigation)
 
-Progress: [███░░░░░░░] 30%
+Progress: [████░░░░░░] 40%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: ~12 min
-- Total execution time: ~0.6 hours
+- Total plans completed: 4
+- Average duration: ~10 min
+- Total execution time: ~0.7 hours
 
 **By Phase:**
 
@@ -29,10 +29,11 @@ Progress: [███░░░░░░░] 30%
 |-------|-------|-------|----------|
 | 01-foundation | 2 | ~20 min | ~10 min |
 | 02-character | 1 | ~15 min | ~15 min |
+| 03-controls | 1 | ~1 min | ~1 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (5 min), 01-02 (15 min), 02-01 (15 min)
-- Trend: checkpoint feedback loop added time to 02-01
+- Last 5 plans: 01-01 (5 min), 01-02 (15 min), 02-01 (15 min), 03-01 (1 min)
+- Trend: Straightforward autonomous plans execute very fast
 
 *Updated after each plan completion*
 
@@ -53,6 +54,9 @@ Recent decisions affecting current work:
 - **Sprite3D HD-2D pattern:** billboard=2, texture_filter=0, alpha_cut=2, shaded=true (02-01)
 - **Blob shadow pattern:** ShapeCast3D + Decal with explicit collision_layer/mask (02-01)
 - **pixel_size=0.015** for character scale (02-01 user adjustment)
+- **Navigation pattern:** NavigationAgent3D with path_desired_distance=0.3, avoidance disabled (03-01)
+- **Click-to-move pattern:** _unhandled_input, raycast collision_mask=1 for floor only (03-01)
+- **Eased motion:** ACCELERATION=3.0, DECELERATION=4.0, MAX_SPEED=1.5 (03-01)
 
 ### Pending Todos
 
@@ -65,5 +69,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-02
-Stopped at: Phase 2 complete, ready for Phase 3 (Controls)
+Stopped at: Completed 03-01-PLAN.md (Click-to-Move Navigation)
 Resume file: None
