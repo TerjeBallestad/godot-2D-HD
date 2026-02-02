@@ -65,24 +65,24 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| REND-01 | TBD | Pending |
-| REND-02 | TBD | Pending |
-| REND-03 | TBD | Pending |
-| REND-04 | TBD | Pending |
-| SPRT-01 | TBD | Pending |
-| SPRT-02 | TBD | Pending |
-| SPRT-03 | TBD | Pending |
-| ENV-01 | TBD | Pending |
-| ENV-02 | TBD | Pending |
-| CTRL-01 | TBD | Pending |
-| CTRL-02 | TBD | Pending |
-| CTRL-03 | TBD | Pending |
+| ENV-01 | Phase 1: Foundation | Pending |
+| ENV-02 | Phase 1: Foundation | Pending |
+| SPRT-01 | Phase 2: Character | Pending |
+| SPRT-02 | Phase 2: Character | Pending |
+| CTRL-01 | Phase 3: Controls | Pending |
+| CTRL-02 | Phase 3: Controls | Pending |
+| CTRL-03 | Phase 3: Controls | Pending |
+| REND-02 | Phase 4: Atmosphere | Pending |
+| REND-03 | Phase 4: Atmosphere | Pending |
+| REND-04 | Phase 4: Atmosphere | Pending |
+| SPRT-03 | Phase 4: Atmosphere | Pending |
+| REND-01 | Phase 5: Tilt-Shift | Pending |
 
 **Coverage:**
 - v1 requirements: 12 total
-- Mapped to phases: 0
-- Unmapped: 12 (pending roadmap creation)
+- Mapped to phases: 12
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-02*
-*Last updated: 2026-02-02 after initial definition*
+*Last updated: 2026-02-02 after roadmap creation*
