@@ -32,8 +32,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Scene infrastructure (WorldEnvironment, layered lighting, isometric camera)
-- [ ] 01-02-PLAN.md — Pixel art asset integration and visual verification
+- [x] 01-01-PLAN.md — Scene infrastructure (WorldEnvironment, layered lighting, isometric camera)
+- [x] 01-02-PLAN.md — Pixel art asset integration and visual verification
 
 ### Phase 2: Character
 **Goal**: Player character exists as a pixel-art billboard sprite in the 3D scene
@@ -44,10 +44,10 @@ Plans:
   2. Sprite billboards to always face the camera regardless of camera angle
   3. Sprite displays with crisp nearest-neighbor filtering (no blurry interpolation)
   4. Sprite integrates visually with the 3D environment (correct scale and positioning)
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 02-01: TBD
+- [ ] 02-01-PLAN.md — Player character Sprite3D with Y-axis billboard, blob shadow, and scene integration
 
 ### Phase 3: Controls
 **Goal**: User can navigate the character and adjust camera to evaluate the scene from different perspectives
@@ -101,7 +101,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | 2026-02-02 |
-| 2. Character | 0/1 | Not started | - |
+| 2. Character | 0/1 | Planned | - |
 | 3. Controls | 0/2 | Not started | - |
 | 4. Atmosphere | 0/2 | Not started | - |
 | 5. Tilt-Shift | 0/1 | Not started | - |
