@@ -65,8 +65,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ENV-01 | Phase 1: Foundation | Pending |
-| ENV-02 | Phase 1: Foundation | Pending |
+| ENV-01 | Phase 1: Foundation | Complete |
+| ENV-02 | Phase 1: Foundation | Complete |
 | SPRT-01 | Phase 2: Character | Pending |
 | SPRT-02 | Phase 2: Character | Pending |
 | CTRL-01 | Phase 3: Controls | Pending |
