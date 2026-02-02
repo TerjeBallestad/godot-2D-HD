@@ -1,5 +1,5 @@
 ---
-status: complete
+status: diagnosed
 phase: 02-character
 source: [02-01-SUMMARY.md]
 started: 2026-02-02T21:00:00Z
@@ -49,11 +49,17 @@ skipped: 0
 ## Gaps
 
 - truth: "Dark semi-transparent elliptical shadow visible on the floor directly beneath the character"
-  status: failed
+  status: fixed
   reason: "User reported: It doesn't appear"
   severity: major
   test: 4
-  root_cause: ""
-  artifacts: []
-  missing: []
-  debug_session: ""
+  root_cause: "Godot editor re-save removed explicit collision_layer and collision_mask properties"
+  artifacts:
+    - path: "scenes/character/player_character.tscn"
+      issue: "ShapeCast3D missing collision_mask = 1"
+    - path: "scenes/interior/interior_scene.tscn"
+      issue: "FloorCollider missing collision_layer = 1"
+  missing:
+    - "Add collision_mask = 1 to ShapeCast3D"
+    - "Add collision_layer = 1 to FloorCollider"
+  debug_session: ".planning/debug/blob-shadow-not-appearing.md"
