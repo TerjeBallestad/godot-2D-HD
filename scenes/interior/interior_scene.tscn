@@ -14,6 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://c55cc3mf8s75i" path="res://assets/models/furniture/bookcaseClosedWide.glb" id="12_bookcase"]
 [ext_resource type="PackedScene" uid="uid://b1qnigrqrboij" path="res://assets/models/furniture/pottedPlant.glb" id="13_plant"]
 [ext_resource type="PackedScene" uid="uid://dwdkkh6i3t3xx" path="res://assets/models/furniture/books.glb" id="14_books"]
+[ext_resource type="PackedScene" uid="uid://c8xr2m5k7h3np" path="res://scenes/character/player_character.tscn" id="15_player"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1"]
+size = Vector3(4, 0.1, 4)
 
 [sub_resource type="Environment" id="Environment_1"]
 background_mode = 1
@@ -147,6 +151,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5883411, 0, 0.62228954)
 
 [node name="Books" parent="Assets/Furniture" unique_id=657288847 instance=ExtResource("14_books")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.25, 0)
+
+[node name="Player" parent="." instance=ExtResource("15_player")]
+
+[node name="FloorCollider" type="StaticBody3D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FloorCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+shape = SubResource("BoxShape3D_1")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2090331850]
 transform = Transform3D(-0.7701905, -0.25820124, 0.58321404, 7.993898e-08, 0.9143953, 0.40482238, 0.6378138, -0.31179038, 0.7042586, 3, 2.5, 3)
