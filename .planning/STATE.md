@@ -5,7 +5,7 @@
 See: .planning/PROJECT.md (updated 2026-02-02)
 
 **Core value:** Visual quality must feel right when moving through the scene — go/no-go decision for Godot
-**Current focus:** Phase 2 - Character (Complete)
+**Current focus:** Phase 3 - Controls
 
 ## Current Position
 

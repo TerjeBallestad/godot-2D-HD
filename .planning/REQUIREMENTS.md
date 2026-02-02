@@ -16,8 +16,8 @@ Requirements for the evaluation prototype. Each maps to roadmap phases.
 
 ### Sprites
 
-- [ ] **SPRT-01**: Sprite3D billboard for player character
-- [ ] **SPRT-02**: Pixel-art filtering (nearest-neighbor) on all sprites
+- [x] **SPRT-01**: Sprite3D billboard for player character
+- [x] **SPRT-02**: Pixel-art filtering (nearest-neighbor) on all sprites
 - [ ] **SPRT-03**: Point lights casting character shadows on environment
 
 ### Environment
@@ -67,8 +67,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | ENV-01 | Phase 1: Foundation | Complete |
 | ENV-02 | Phase 1: Foundation | Complete |
-| SPRT-01 | Phase 2: Character | Pending |
-| SPRT-02 | Phase 2: Character | Pending |
+| SPRT-01 | Phase 2: Character | Complete |
+| SPRT-02 | Phase 2: Character | Complete |
 | CTRL-01 | Phase 3: Controls | Pending |
 | CTRL-02 | Phase 3: Controls | Pending |
 | CTRL-03 | Phase 3: Controls | Pending |
