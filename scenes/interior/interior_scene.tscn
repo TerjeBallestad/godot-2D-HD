@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bq8x2ky5l6m1p"]
 
 [ext_resource type="Script" uid="uid://dmnc3x2uqx574" path="res://scenes/interior/interior_scene.gd" id="1_script"]
+[ext_resource type="Script" path="res://scenes/interior/camera_rig.gd" id="16_camera_rig"]
 [ext_resource type="PackedScene" uid="uid://dmlyyetwnmo7" path="res://assets/models/furniture/floorFull.glb" id="2_floor"]
 [ext_resource type="PackedScene" uid="uid://cgynvt7utkbwh" path="res://assets/models/furniture/wall.glb" id="3_wall"]
 [ext_resource type="PackedScene" uid="uid://btgai87vf6q1s" path="res://assets/models/furniture/wallWindow.glb" id="4_wallwindow"]
@@ -175,10 +176,16 @@ collision_mask = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.023565095, 0)
 shape = SubResource("BoxShape3D_1")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=2090331850]
-transform = Transform3D(-0.7701905, -0.25820124, 0.58321404, 7.993898e-08, 0.9143953, 0.40482238, 0.6378138, -0.31179038, 0.7042586, 3, 2.5, 3)
+[node name="CameraRig" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("16_camera_rig")
+
+[node name="InnerGimbal" type="Node3D" parent="CameraRig"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig/InnerGimbal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 current = true
 fov = 29.7
-size = 0.055
 near = 0.1
 far = 100.0
