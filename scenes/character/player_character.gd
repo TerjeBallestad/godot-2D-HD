@@ -40,7 +40,7 @@ func _handle_click(screen_pos: Vector2) -> void:
 
 	var space_state = get_world_3d().direct_space_state
 	var query = PhysicsRayQueryParameters3D.create(from, to)
-	query.collision_mask = 1  # Floor collision layer only
+	query.collision_mask = 2  # Floor collision layer only (layer 2)
 	query.collide_with_areas = false
 
 	var result = space_state.intersect_ray(query)
