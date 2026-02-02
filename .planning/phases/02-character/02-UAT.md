@@ -1,9 +1,9 @@
 ---
-status: diagnosed
+status: complete
 phase: 02-character
 source: [02-01-SUMMARY.md]
 started: 2026-02-02T21:00:00Z
-updated: 2026-02-02T21:07:00Z
+updated: 2026-02-02T21:15:00Z
 ---
 
 ## Current Test
@@ -26,9 +26,9 @@ result: pass
 
 ### 4. Blob Shadow
 expected: Dark semi-transparent elliptical shadow visible on the floor directly beneath the character
-result: issue
+result: pass (fixed)
 reported: "It doesn't appear"
-severity: major
+fix: "Restored collision_mask=1 and collision_layer=1 properties"
 
 ### 5. Character Scale
 expected: Character size looks appropriate relative to furniture - slightly stylized (~95% scale), not too big or small compared to sofa, chairs, etc.
@@ -41,8 +41,8 @@ result: pass
 ## Summary
 
 total: 6
-passed: 5
-issues: 1
+passed: 6
+issues: 0
 pending: 0
 skipped: 0
 
