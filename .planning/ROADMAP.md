@@ -29,11 +29,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. WorldEnvironment shows ACES tone mapping applied (colors look HDR-correct)
   3. Ambient lighting illuminates the scene appropriately for interior space
   4. Camera shows the scene from a fixed isometric-style angle
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md — Scene infrastructure (WorldEnvironment, layered lighting, isometric camera)
+- [ ] 01-02-PLAN.md — Pixel art asset integration and visual verification
 
 ### Phase 2: Character
 **Goal**: Player character exists as a pixel-art billboard sprite in the 3D scene
@@ -100,7 +100,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/2 | Not started | - |
+| 1. Foundation | 0/2 | Ready to execute | - |
 | 2. Character | 0/1 | Not started | - |
 | 3. Controls | 0/2 | Not started | - |
 | 4. Atmosphere | 0/2 | Not started | - |
