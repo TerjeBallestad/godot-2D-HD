@@ -17,22 +17,15 @@
 
 [sub_resource type="Environment" id="Environment_1"]
 background_mode = 1
-background_color = Color(0.05, 0.05, 0.08, 1)
+background_color = Color(0.1, 0.1, 0.12, 1)
 ambient_light_source = 2
-ambient_light_color = Color(0.4, 0.35, 0.3, 1)
-ambient_light_energy = 0.3
+ambient_light_color = Color(0.5, 0.45, 0.4, 1)
+ambient_light_energy = 0.5
 tonemap_mode = 3
-tonemap_exposure = 1.0
+tonemap_exposure = 1.2
 tonemap_white = 6.0
-ssao_enabled = true
-ssao_radius = 1.0
-ssao_intensity = 1.5
-ssao_power = 1.5
-glow_enabled = true
-glow_intensity = 0.3
-glow_bloom = 0.0
-glow_blend_mode = 3
-glow_hdr_threshold = 1.5
+ssao_enabled = false
+glow_enabled = false
 
 [node name="InteriorScene" type="Node3D"]
 script = ExtResource("1_script")
@@ -161,7 +154,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, 0.9)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.25, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.707107, 0.286788, -0.646447, 0, 0.913545, 0.406737, 0.707107, -0.286788, 0.646447, 4, 3, 4)
+transform = Transform3D(-0.707107, 0, 0.707107, -0.301511, 0.904534, -0.301511, 0.639602, 0.426401, 0.639602, 3, 2.5, 3)
 current = true
 fov = 50.0
 near = 0.1
