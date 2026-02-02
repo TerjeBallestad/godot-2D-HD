@@ -20,7 +20,6 @@ var is_moving: bool = false
 func _ready() -> void:
 	# Wait for navigation to be ready (avoids first-frame pathfinding issues)
 	await get_tree().physics_frame
-	navigation_agent.velocity_computed.connect(_on_velocity_computed)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -84,12 +83,7 @@ func _update_movement(delta: float) -> void:
 		# Accelerate up to max speed
 		current_speed = minf(current_speed + ACCELERATION * delta, MAX_SPEED)
 
-	var desired_velocity = direction * current_speed
-	navigation_agent.velocity = desired_velocity
-
-
-func _on_velocity_computed(safe_velocity: Vector3) -> void:
-	velocity = safe_velocity
+	velocity = direction * current_speed
 	move_and_slide()
 
 
