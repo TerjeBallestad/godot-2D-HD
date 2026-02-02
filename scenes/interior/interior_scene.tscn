@@ -22,7 +22,6 @@ ambient_light_source = 2
 ambient_light_color = Color(0.6, 0.55, 0.5, 1)
 ambient_light_energy = 0.4
 tonemap_mode = 3
-tonemap_exposure = 1.0
 tonemap_white = 6.0
 
 [node name="InteriorScene" type="Node3D" unique_id=1594013898]
@@ -36,7 +35,7 @@ environment = SubResource("Environment_1")
 [node name="WindowLight" type="DirectionalLight3D" parent="Lighting" unique_id=242788534]
 transform = Transform3D(0.707107, 0.353553, -0.612372, 0, 0.866025, 0.5, 0.707107, -0.353553, 0.612372, 0, 0, 0)
 light_color = Color(0.85, 0.9, 1, 1)
-light_energy = 0.4
+light_energy = 0.2
 shadow_enabled = true
 
 [node name="Lamps" type="Node3D" parent="Lighting" unique_id=1597192297]
@@ -44,21 +43,20 @@ shadow_enabled = true
 [node name="TableLamp" type="OmniLight3D" parent="Lighting/Lamps" unique_id=2065539924]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1, 0)
 light_color = Color(1, 0.85, 0.65, 1)
-light_energy = 1.0
-omni_range = 5.0
+light_energy = 0.245
 omni_attenuation = 1.2
 
 [node name="FloorLamp" type="OmniLight3D" parent="Lighting/Lamps" unique_id=370763913]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1.2, 0.9)
 light_color = Color(1, 0.85, 0.65, 1)
-light_energy = 0.8
+light_energy = 0.305
 omni_range = 4.0
 omni_attenuation = 1.2
 
 [node name="Fireplace" type="OmniLight3D" parent="Lighting" unique_id=389766960]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0.5, 0)
 light_color = Color(1, 0.65, 0.35, 1)
-light_energy = 1.2
+light_energy = 0.32
 omni_range = 3.0
 omni_attenuation = 1.5
 
@@ -139,13 +137,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0.7)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0, 0.9)
 
 [node name="Rug" parent="Assets/Furniture" unique_id=1385996068 instance=ExtResource("11_rug")]
-transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0.01, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, -0.8018414, 0.05626882, 0.61581826)
 
 [node name="Bookcase" parent="Assets/Furniture" unique_id=810727614 instance=ExtResource("12_bookcase")]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 1.2, 0, -1.2)
 
 [node name="PottedPlant" parent="Assets/Furniture" unique_id=1546350414 instance=ExtResource("13_plant")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, 0.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5883411, 0, 0.62228954)
 
 [node name="Books" parent="Assets/Furniture" unique_id=657288847 instance=ExtResource("14_books")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.25, 0)
@@ -153,6 +151,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.25, 0)
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2090331850]
 transform = Transform3D(-0.7701905, -0.25820124, 0.58321404, 7.993898e-08, 0.9143953, 0.40482238, 0.6378138, -0.31179038, 0.7042586, 3, 2.5, 3)
 current = true
-fov = 50.0
+fov = 29.7
+size = 0.055
 near = 0.1
 far = 100.0
