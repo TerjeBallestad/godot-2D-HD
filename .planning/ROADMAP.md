@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation** - Interior scene and WorldEnvironment setup
 - [x] **Phase 2: Character** - Sprite3D player with pixel-art filtering
 - [x] **Phase 3: Controls** - Click-to-move navigation and camera controls
-- [ ] **Phase 4: Atmosphere** - Post-processing, volumetric fog, and lighting
+- [x] **Phase 4: Atmosphere** - Post-processing, volumetric fog, and lighting
 - [ ] **Phase 5: Tilt-Shift** - Depth-based DoF shader with character-following focal point
 
 ## Phase Details
@@ -76,9 +76,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Bloom and volumetric fog configuration in Environment
-- [ ] 04-02-PLAN.md — Vignette shader creation (rectangular falloff with warm tint)
-- [ ] 04-03-PLAN.md — Vignette integration, point light shadows, and visual verification
+- [x] 04-01-PLAN.md — Bloom and volumetric fog configuration in Environment
+- [x] 04-02-PLAN.md — Vignette shader creation (rectangular falloff with warm tint)
+- [x] 04-03-PLAN.md — Vignette integration, point light shadows, and visual verification
 
 ### Phase 5: Tilt-Shift
 **Goal**: The signature HD-2D miniature/diorama effect is achieved with depth-based blur
@@ -104,5 +104,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Foundation | 2/2 | Complete | 2026-02-02 |
 | 2. Character | 1/1 | Complete | 2026-02-02 |
 | 3. Controls | 2/2 | Complete | 2026-02-02 |
-| 4. Atmosphere | 0/3 | Not started | - |
+| 4. Atmosphere | 3/3 | Complete | 2026-02-03 |
 | 5. Tilt-Shift | 0/1 | Not started | - |
