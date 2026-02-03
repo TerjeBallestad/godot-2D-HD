@@ -21,7 +21,7 @@
 [ext_resource type="Script" uid="uid://6nm0npavdeap" path="res://scenes/interior/tilt_shift_controller.gd" id="19_tiltshift_controller"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_1"]
-geometry_parsed_geometry_type = 1
+geometry_parsed_geometry_type = 0
 cell_size = 0.1
 cell_height = 0.1
 agent_height = 1.0
