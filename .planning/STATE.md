@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-02)
 
 **Core value:** Visual quality must feel right when moving through the scene — go/no-go decision for Godot
-**Current focus:** Fix pathfinding gap from audit
+**Current focus:** Milestone 1 complete - pathfinding gap closed
 
 ## Current Position
 
 Phase: 6 of 6 (Pathfinding)
-Plan: 0 of 1 in current phase (not yet planned)
-Status: Gap closure phase added, needs planning
-Last activity: 2026-02-03 — Phase 6 added to close pathfinding gap
+Plan: 1 of 1 in current phase
+Status: Phase complete - Milestone 1 complete
+Last activity: 2026-02-03 — Completed 06-01-PLAN.md (pathfinding gap closure)
 
-Progress: [█████████░] 90%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
+- Total plans completed: 10
 - Average duration: ~10 min
-- Total execution time: ~1.5 hours
+- Total execution time: ~1.6 hours
 
 **By Phase:**
 
@@ -32,10 +32,11 @@ Progress: [█████████░] 90%
 | 03-controls | 2 | ~2 min | ~1 min |
 | 04-atmosphere | 3 | ~30 min | ~10 min |
 | 05-tilt-shift | 1 | ~25 min | ~25 min |
+| 06-pathfinding | 1 | ~5 min | ~5 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (3 min), 04-02 (1 min), 04-03 (25 min), 05-01 (25 min)
-- Trend: Complex shader debugging required iteration (depth reconstruction, view-space fix)
+- Last 5 plans: 04-02 (1 min), 04-03 (25 min), 05-01 (25 min), 06-01 (5 min)
+- Trend: Gap closure plan was straightforward due to good research
 
 *Updated after each plan completion*
 
@@ -68,17 +69,20 @@ Recent decisions affecting current work:
 - **Tilt-shift pattern:** View-space depth comparison (not world-space) for fullscreen quad compatibility (05-01)
 - **Focal tracking:** Exponential smoothing with focal_smoothing=5.0, height_offset=0.5 (05-01)
 - **Tuned blur parameters:** focus_distance=0.6, blur_max=1.5, blur_transition=2.0 for subtle HD-2D look (05-01)
+- **MESH_INSTANCES navmesh parsing:** GLB furniture has no collision shapes, use geometry_parsed_geometry_type=0 (06-01)
+- **Deferred navigation setup:** call_deferred + await physics_frame for NavServer timing (06-01)
+- **Deceleration on final target:** Use navigation_agent.target_position distance for smooth stopping (06-01)
 
 ### Pending Todos
 
-None yet.
+None - Milestone 1 complete.
 
 ### Blockers/Concerns
 
-None yet.
+None.
 
 ## Session Continuity
 
 Last session: 2026-02-03
-Stopped at: All phases complete, milestone ready for audit
+Stopped at: Completed 06-01-PLAN.md - Milestone 1 complete
 Resume file: None
