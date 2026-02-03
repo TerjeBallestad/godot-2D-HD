@@ -3,6 +3,14 @@
 [ext_resource type="Script" uid="uid://djoyiihskjwds" path="res://scenes/character/player_character.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://byabuidfqgvtd" path="res://assets/textures/Elling-New-1.png" id="2_g4tfd"]
 [ext_resource type="Texture2D" uid="uid://by2jyr4ih7lgt" path="res://assets/textures/Sprite-0001.png" id="3_g4tfd"]
+[ext_resource type="Shader" uid="uid://bum6hdu6tbqo0" path="res://shaders/sprite_emissive.gdshader" id="4_emissive"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sprite"]
+render_priority = 0
+shader = ExtResource("4_emissive")
+shader_parameter/texture_albedo = ExtResource("2_g4tfd")
+shader_parameter/emission_strength = 0.3
+shader_parameter/alpha_scissor_threshold = 0.5
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1"]
 radius = 0.1
@@ -15,6 +23,9 @@ height = 0.8
 script = ExtResource("1_script")
 
 [node name="Sprite" type="Sprite3D" parent="." unique_id=2041283321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.30968e-05, -0.0148287015, -5.8829784e-05)
+material_override = SubResource("ShaderMaterial_sprite")
+cast_shadow = 0
 offset = Vector2(0, 16)
 pixel_size = 0.015
 billboard = 2
@@ -44,3 +55,4 @@ shape = SubResource("CapsuleShape3D_1")
 path_desired_distance = 0.3
 target_desired_distance = 0.3
 max_speed = 1.5
+debug_enabled = true

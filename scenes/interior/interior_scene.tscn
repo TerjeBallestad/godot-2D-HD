@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dwdkkh6i3t3xx" path="res://assets/models/furniture/books.glb" id="14_books"]
 [ext_resource type="PackedScene" uid="uid://c8xr2m5k7h3np" path="res://scenes/character/player_character.tscn" id="15_player"]
 [ext_resource type="Script" uid="uid://cpawxsitqkle8" path="res://scenes/interior/camera_rig.gd" id="16_camera_rig"]
-[ext_resource type="Shader" path="res://shaders/vignette.gdshader" id="17_vignette"]
+[ext_resource type="Shader" uid="uid://bhrbe8eown4ar" path="res://shaders/vignette.gdshader" id="17_vignette"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_1"]
 geometry_parsed_geometry_type = 1
@@ -30,42 +30,44 @@ background_mode = 1
 background_color = Color(0.15, 0.15, 0.18, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.6, 0.55, 0.5, 1)
-ambient_light_energy = 0.4
+ambient_light_energy = 0.61
 tonemap_mode = 3
 tonemap_white = 6.0
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_use_occlusion = true
 glow_enabled = true
-glow_intensity = 0.8
-glow_strength = 1.0
-glow_bloom = 0.0
-glow_hdr_threshold = 1.0
-glow_hdr_luminance_cap = 12.0
+glow_levels/1 = 1.0
+glow_levels/2 = 1.0
+glow_levels/4 = 1.0
+glow_normalized = true
+glow_strength = 0.3
+glow_bloom = 0.47
 glow_blend_mode = 0
-glow_levels/1 = true
-glow_levels/2 = true
-glow_levels/4 = true
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
+fog_enabled = true
+fog_light_color = Color(0.2252262, 0.07481218, 0.35061356, 1)
+fog_light_energy = 0.86
+fog_density = 0.109
+fog_sky_affect = 0.0
+volumetric_fog_density = 0.09
 volumetric_fog_albedo = Color(0.9, 0.9, 0.9, 1)
-volumetric_fog_emission = Color(0, 0, 0, 1)
-volumetric_fog_emission_energy = 0.0
+volumetric_fog_emission = Color(0.4204399, 0.23259506, 0.606218, 1)
+volumetric_fog_emission_energy = 0.1
+volumetric_fog_gi_inject = 0.1
 volumetric_fog_anisotropy = 0.6
-volumetric_fog_length = 64.0
-volumetric_fog_detail_spread = 2.0
-volumetric_fog_ambient_inject = 0.0
-volumetric_fog_gi_inject = 0.0
-volumetric_fog_temporal_reprojection_enabled = true
-volumetric_fog_temporal_reprojection_amount = 0.9
+adjustment_enabled = true
+adjustment_brightness = 0.88
+adjustment_contrast = 1.03
+adjustment_saturation = 1.14
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1"]
-size = Vector3(4, 0.1, 4)
+size = Vector3(4, 0.08127441, 4)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vignette"]
 shader = ExtResource("17_vignette")
 shader_parameter/vignette_intensity = 0.4
-shader_parameter/vignette_opacity = 0.3
-shader_parameter/vignette_color = Color(0.15, 0.1, 0.05, 1)
-shader_parameter/edge_blur_strength = 0.3
-shader_parameter/edge_blur_size = 1.5
+shader_parameter/vignette_opacity = 0.4
+shader_parameter/vignette_color = Color(0.1, 0.07, 0.03, 1)
 
 [node name="InteriorScene" type="Node3D" unique_id=1594013898]
 script = ExtResource("1_script")
@@ -83,40 +85,46 @@ transform = Transform3D(0.707107, 0.353553, -0.612372, 0, 0.866025, 0.5, 0.70710
 light_color = Color(0.85, 0.9, 1, 1)
 light_energy = 0.2
 shadow_enabled = true
+shadow_bias = 0.03
 
 [node name="Lamps" type="Node3D" parent="Lighting" unique_id=1597192297]
 
 [node name="TableLamp" type="OmniLight3D" parent="Lighting/Lamps" unique_id=2065539924]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3709736, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2691188, 1.4742656, 1.3529654)
 light_color = Color(1, 0.85, 0.65, 1)
-light_energy = 0.245
-omni_attenuation = 1.2
+light_energy = 0.384
+light_indirect_energy = 1.794
+light_size = 0.171
+light_bake_mode = 1
 shadow_enabled = true
-shadow_blur = 1.5
 shadow_bias = 0.02
-shadow_normal_bias = 1.0
+shadow_normal_bias = 2.0
+shadow_blur = 1.5
+omni_attenuation = 1.2
 
 [node name="FloorLamp" type="OmniLight3D" parent="Lighting/Lamps" unique_id=370763913]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47949803, 1.2, 0.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7671743, 0.78675437, 0.8418287)
 light_color = Color(1, 0.85, 0.65, 1)
 light_energy = 0.305
+light_bake_mode = 1
+shadow_enabled = true
+shadow_bias = 0.02
+shadow_normal_bias = 2.0
+shadow_blur = 1.5
 omni_range = 4.0
 omni_attenuation = 1.2
-shadow_enabled = true
-shadow_blur = 1.5
-shadow_bias = 0.02
-shadow_normal_bias = 1.0
 
 [node name="Fireplace" type="OmniLight3D" parent="Lighting" unique_id=389766960]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5297904, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47212452, 0.6112332, -1.5727198)
 light_color = Color(1, 0.65, 0.35, 1)
 light_energy = 0.32
+light_bake_mode = 1
+shadow_enabled = true
+shadow_bias = 0.02
+shadow_normal_bias = 2.0
+shadow_blur = 2.0
 omni_range = 3.0
 omni_attenuation = 1.5
-shadow_enabled = true
-shadow_blur = 2.0
-shadow_bias = 0.02
-shadow_normal_bias = 1.0
 
 [node name="Environment" type="Node3D" parent="." unique_id=446150029]
 
@@ -174,22 +182,19 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.4
 [node name="Furniture" type="Node3D" parent="Assets" unique_id=163188262]
 
 [node name="Sofa" parent="Assets/Furniture" unique_id=1840022449 instance=ExtResource("6_sofa")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.42761964, 0, 0)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -0.42761964, 0.06725025, 0.40724024)
 
 [node name="CoffeeTable" parent="Assets/Furniture" unique_id=957487757 instance=ExtResource("8_coffeetable")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.06816745, 0)
 
 [node name="Chair1" parent="Assets/Furniture" unique_id=497070319 instance=ExtResource("7_chair")]
-transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.8, 0, -0.6)
-
-[node name="Chair2" parent="Assets/Furniture" unique_id=909258250 instance=ExtResource("7_chair")]
-transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.8, 0, 0.6)
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.8, 0.073565066, -0.6)
 
 [node name="SideTable1" parent="Assets/Furniture" unique_id=1731733603 instance=ExtResource("9_sidetable")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12265527, 0, -0.7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.258054, 0.054056168, -1.7555039)
 
 [node name="SideTable2" parent="Assets/Furniture" unique_id=798658616 instance=ExtResource("9_sidetable")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12265527, 0, 0.7)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.72694635, 0, -0.78940946)
 
 [node name="FloorLamp" parent="Assets/Furniture" unique_id=1540549167 instance=ExtResource("10_floorlamp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8256717, 0.05391717, 0.9)
@@ -198,13 +203,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8256717, 0.05391717, 0.9)
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, -0.8018414, 0.05626882, 0.61581826)
 
 [node name="Bookcase" parent="Assets/Furniture" unique_id=810727614 instance=ExtResource("12_bookcase")]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 1.2, 0, -1.2)
+transform = Transform3D(1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, 1, 0.20000005, 0.054459333, -1.7227707)
 
 [node name="PottedPlant" parent="Assets/Furniture" unique_id=1546350414 instance=ExtResource("13_plant")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5883411, 0, 0.62228954)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7072345, 5.9604645e-08, 0.62991136)
 
 [node name="Books" parent="Assets/Furniture" unique_id=657288847 instance=ExtResource("14_books")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.31816745, 0)
 
 [node name="Player" parent="." unique_id=1018124595 instance=ExtResource("15_player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.97321534, 0.08013752, 0.19143519)
@@ -214,7 +219,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FloorCollider" unique_id=1825101688]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.023565095, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0142023, 0)
 shape = SubResource("BoxShape3D_1")
 
 [node name="CameraRig" type="Node3D" parent="." unique_id=1912547631]
@@ -224,20 +229,20 @@ script = ExtResource("16_camera_rig")
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraRig/InnerGimbal" unique_id=146191616]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1.0000005, 0, 0, 0, 1.0000005, 1.0418037, 0.0066730976, 4.9884424)
 current = true
 fov = 29.7
 near = 0.1
 far = 100.0
 
-[node name="PostProcessing" type="CanvasLayer" parent="."]
-layer = 0
+[node name="PostProcessing" type="CanvasLayer" parent="." unique_id=895481220]
+layer = 100
 
-[node name="Vignette" type="ColorRect" parent="PostProcessing"]
+[node name="Vignette" type="ColorRect" parent="PostProcessing" unique_id=2116681114]
+material = SubResource("ShaderMaterial_vignette")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-material = SubResource("ShaderMaterial_vignette")
