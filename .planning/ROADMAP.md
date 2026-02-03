@@ -17,6 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Controls** - Click-to-move navigation and camera controls
 - [x] **Phase 4: Atmosphere** - Post-processing, volumetric fog, and lighting
 - [x] **Phase 5: Tilt-Shift** - Depth-based DoF shader with character-following focal point
+- [ ] **Phase 6: Pathfinding** - Restore navigation so character paths around furniture
 
 ## Phase Details
 
@@ -94,10 +95,25 @@ Plans:
 Plans:
 - [x] 05-01-PLAN.md — Tilt-shift shader with depth-based blur and focal tracking
 
+### Phase 6: Pathfinding
+**Goal**: Character navigates around furniture instead of walking through it
+**Depends on**: Phase 5
+**Requirements**: None (gap closure from audit)
+**Gap Closure**: Fixes "Walk-and-Look" flow degradation identified in v1-MILESTONE-AUDIT.md
+**Success Criteria** (what must be TRUE):
+  1. NavigationAgent3D is actively used for pathfinding (not orphaned)
+  2. Character paths around furniture when clicking on the far side
+  3. Character cannot walk through solid objects
+  4. Navmesh is properly baked and queried at runtime
+**Plans**: TBD
+
+Plans:
+- [ ] 06-01-PLAN.md — Restore NavigationAgent3D pathfinding with async navmesh handling
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -106,3 +122,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 3. Controls | 2/2 | Complete | 2026-02-02 |
 | 4. Atmosphere | 3/3 | Complete | 2026-02-03 |
 | 5. Tilt-Shift | 1/1 | Complete | 2026-02-03 |
+| 6. Pathfinding | 0/1 | Pending | — |

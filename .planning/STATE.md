@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-02)
 
 **Core value:** Visual quality must feel right when moving through the scene — go/no-go decision for Godot
-**Current focus:** Milestone complete - HD-2D evaluation ready
+**Current focus:** Fix pathfinding gap from audit
 
 ## Current Position
 
-Phase: 5 of 5 (Tilt-Shift)
-Plan: 1 of 1 in current phase (complete)
-Status: All phases complete, milestone ready for audit
-Last activity: 2026-02-03 — Phase 5 verified (user approved tilt-shift effect)
+Phase: 6 of 6 (Pathfinding)
+Plan: 0 of 1 in current phase (not yet planned)
+Status: Gap closure phase added, needs planning
+Last activity: 2026-02-03 — Phase 6 added to close pathfinding gap
 
-Progress: [██████████] 100%
+Progress: [█████████░] 90%
 
 ## Performance Metrics
 
