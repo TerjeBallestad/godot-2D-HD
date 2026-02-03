@@ -22,10 +22,10 @@
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_1"]
 geometry_parsed_geometry_type = 0
-cell_size = 0.1
-cell_height = 0.1
+geometry_source_geometry_mode = 1
 agent_height = 1.0
 agent_radius = 0.3
+filter_walkable_low_height_spans = true
 
 [sub_resource type="Environment" id="Environment_1"]
 background_mode = 1
@@ -72,11 +72,12 @@ size = Vector2(2, 2)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tiltshift"]
 render_priority = 0
 shader = ExtResource("18_tiltshift")
-shader_parameter/focal_point = Vector3(0, 0.5, 0)
+shader_parameter/focal_point_view = Vector3(0, 0, -5)
 shader_parameter/focus_distance = 0.6
 shader_parameter/blur_max = 1.5
 shader_parameter/blur_transition = 2.0
 shader_parameter/enabled = true
+shader_parameter/debug_mode = 0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vignette"]
 shader = ExtResource("17_vignette")
