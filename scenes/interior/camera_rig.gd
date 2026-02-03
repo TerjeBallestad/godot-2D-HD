@@ -55,6 +55,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				_reset_camera()
 			KEY_T:  # Toggle tilt-shift
 				_toggle_tilt_shift()
+			KEY_D:  # Cycle debug mode
+				_cycle_debug_mode()
 
 	# Mouse wheel zoom
 	if event is InputEventMouseButton:
@@ -153,3 +155,8 @@ func _reset_camera() -> void:
 func _toggle_tilt_shift() -> void:
 	if tilt_shift_quad and tilt_shift_quad.has_method("toggle_effect"):
 		tilt_shift_quad.toggle_effect()
+
+
+func _cycle_debug_mode() -> void:
+	if tilt_shift_quad and tilt_shift_quad.has_method("cycle_debug_mode"):
+		tilt_shift_quad.cycle_debug_mode()

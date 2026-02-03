@@ -17,8 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://c8xr2m5k7h3np" path="res://scenes/character/player_character.tscn" id="15_player"]
 [ext_resource type="Script" uid="uid://cpawxsitqkle8" path="res://scenes/interior/camera_rig.gd" id="16_camera_rig"]
 [ext_resource type="Shader" uid="uid://bhrbe8eown4ar" path="res://shaders/vignette.gdshader" id="17_vignette"]
-[ext_resource type="Shader" path="res://shaders/tilt_shift.gdshader" id="18_tiltshift"]
-[ext_resource type="Script" path="res://scenes/interior/tilt_shift_controller.gd" id="19_tiltshift_controller"]
+[ext_resource type="Shader" uid="uid://bm2schfysj5y3" path="res://shaders/tilt_shift.gdshader" id="18_tiltshift"]
+[ext_resource type="Script" uid="uid://6nm0npavdeap" path="res://scenes/interior/tilt_shift_controller.gd" id="19_tiltshift_controller"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_1"]
 geometry_parsed_geometry_type = 1
@@ -65,23 +65,24 @@ adjustment_saturation = 1.14
 [sub_resource type="BoxShape3D" id="BoxShape3D_1"]
 size = Vector3(4, 0.08127441, 4)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vignette"]
-shader = ExtResource("17_vignette")
-shader_parameter/vignette_intensity = 0.4
-shader_parameter/vignette_opacity = 0.4
-shader_parameter/vignette_color = Color(0.1, 0.07, 0.03, 1)
-
 [sub_resource type="QuadMesh" id="QuadMesh_tiltshift"]
 flip_faces = true
 size = Vector2(2, 2)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tiltshift"]
+render_priority = 0
 shader = ExtResource("18_tiltshift")
 shader_parameter/focal_point = Vector3(0, 0.5, 0)
-shader_parameter/focus_distance = 1.5
+shader_parameter/focus_distance = 2.5
 shader_parameter/blur_max = 2.0
 shader_parameter/blur_transition = 2.0
 shader_parameter/enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vignette"]
+shader = ExtResource("17_vignette")
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.4
+shader_parameter/vignette_color = Color(0.1, 0.07, 0.03, 1)
 
 [node name="InteriorScene" type="Node3D" unique_id=1594013898]
 script = ExtResource("1_script")
@@ -249,7 +250,7 @@ fov = 29.7
 near = 0.1
 far = 100.0
 
-[node name="TiltShiftQuad" type="MeshInstance3D" parent="CameraRig/InnerGimbal/Camera3D"]
+[node name="TiltShiftQuad" type="MeshInstance3D" parent="CameraRig/InnerGimbal/Camera3D" unique_id=389583036]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
 extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_tiltshift")
