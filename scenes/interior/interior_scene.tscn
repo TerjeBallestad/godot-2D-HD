@@ -91,6 +91,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3709736, 1, 0)
 light_color = Color(1, 0.85, 0.65, 1)
 light_energy = 0.245
 omni_attenuation = 1.2
+shadow_enabled = true
+shadow_blur = 1.5
+shadow_bias = 0.02
+shadow_normal_bias = 1.0
 
 [node name="FloorLamp" type="OmniLight3D" parent="Lighting/Lamps" unique_id=370763913]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47949803, 1.2, 0.9)
@@ -98,6 +102,10 @@ light_color = Color(1, 0.85, 0.65, 1)
 light_energy = 0.305
 omni_range = 4.0
 omni_attenuation = 1.2
+shadow_enabled = true
+shadow_blur = 1.5
+shadow_bias = 0.02
+shadow_normal_bias = 1.0
 
 [node name="Fireplace" type="OmniLight3D" parent="Lighting" unique_id=389766960]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5297904, 0.5, 0)
@@ -105,6 +113,10 @@ light_color = Color(1, 0.65, 0.35, 1)
 light_energy = 0.32
 omni_range = 3.0
 omni_attenuation = 1.5
+shadow_enabled = true
+shadow_blur = 2.0
+shadow_bias = 0.02
+shadow_normal_bias = 1.0
 
 [node name="Environment" type="Node3D" parent="." unique_id=446150029]
 
