@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-02)
 ## Current Position
 
 Phase: 4 of 5 (Atmosphere)
-Plan: 1 of 4 in current phase
+Plan: 2 of 5 in current phase
 Status: In progress
-Last activity: 2026-02-03 — Completed 04-01-PLAN.md (bloom & volumetric fog)
+Last activity: 2026-02-03 — Completed 04-02-PLAN.md (vignette shader)
 
 Progress: [███████░░░] 70%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: ~8 min
-- Total execution time: ~0.8 hours
+- Total plans completed: 7
+- Average duration: ~7 min
+- Total execution time: ~0.85 hours
 
 **By Phase:**
 
@@ -30,11 +30,11 @@ Progress: [███████░░░] 70%
 | 01-foundation | 2 | ~20 min | ~10 min |
 | 02-character | 1 | ~15 min | ~15 min |
 | 03-controls | 2 | ~2 min | ~1 min |
-| 04-atmosphere | 1 | ~3 min | ~3 min |
+| 04-atmosphere | 2 | ~4 min | ~2 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (15 min), 03-01 (1 min), 03-02 (1 min), 04-01 (3 min)
-- Trend: Atmosphere plans executing quickly (Environment configuration only)
+- Last 5 plans: 03-01 (1 min), 03-02 (1 min), 04-01 (3 min), 04-02 (1 min)
+- Trend: Atmosphere plans executing quickly (well-specified shader/config tasks)
 
 *Updated after each plan completion*
 
@@ -63,6 +63,8 @@ Recent decisions affecting current work:
 - **Zoom range:** 3.0-8.0 units with 0.5 step for scene evaluation (03-02)
 - **Emissive-only bloom:** glow_bloom=0.0 + glow_hdr_threshold=1.0 (04-01)
 - **Light shaft fog:** density=0.01 + anisotropy=0.6 for subtle rays (04-01)
+- **Rectangular vignette:** UV multiplication trick (uv *= 1.0 - uv.yx) for screen-edge-following (04-02)
+- **LOD edge blur:** textureLod for performant edge softening (04-02)
 
 ### Pending Todos
 
@@ -75,5 +77,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-03
-Stopped at: Completed 04-01-PLAN.md (bloom & volumetric fog)
+Stopped at: Completed 04-02-PLAN.md (vignette shader)
 Resume file: None
