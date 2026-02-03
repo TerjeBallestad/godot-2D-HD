@@ -89,10 +89,10 @@ Plans:
   2. Objects near the character (focal plane) remain sharp
   3. Focal point follows the character as they move through the scene
   4. The combined effect creates the characteristic "miniature" look
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 05-01: TBD
+- [ ] 05-01-PLAN.md — Tilt-shift shader with depth-based blur and focal tracking
 
 ## Progress
 
