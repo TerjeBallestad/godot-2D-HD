@@ -73,11 +73,12 @@ Plans:
   2. Vignette darkens and optionally blurs screen edges for cinematic focus
   3. Volumetric fog adds visible atmospheric haze appropriate for interior
   4. Point light casts visible character shadow onto the environment
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
+- [ ] 04-01-PLAN.md — Bloom and volumetric fog configuration in Environment
+- [ ] 04-02-PLAN.md — Vignette shader creation (rectangular falloff with warm tint)
+- [ ] 04-03-PLAN.md — Vignette integration, point light shadows, and visual verification
 
 ### Phase 5: Tilt-Shift
 **Goal**: The signature HD-2D miniature/diorama effect is achieved with depth-based blur
@@ -103,5 +104,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Foundation | 2/2 | Complete | 2026-02-02 |
 | 2. Character | 1/1 | Complete | 2026-02-02 |
 | 3. Controls | 2/2 | Complete | 2026-02-02 |
-| 4. Atmosphere | 0/2 | Not started | - |
+| 4. Atmosphere | 0/3 | Not started | - |
 | 5. Tilt-Shift | 0/1 | Not started | - |
