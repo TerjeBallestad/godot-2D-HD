@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bq8x2ky5l6m1p"]
 
 [ext_resource type="Script" uid="uid://dmnc3x2uqx574" path="res://scenes/interior/interior_scene.gd" id="1_script"]
-[ext_resource type="Script" path="res://scenes/interior/camera_rig.gd" id="16_camera_rig"]
 [ext_resource type="PackedScene" uid="uid://dmlyyetwnmo7" path="res://assets/models/furniture/floorFull.glb" id="2_floor"]
 [ext_resource type="PackedScene" uid="uid://cgynvt7utkbwh" path="res://assets/models/furniture/wall.glb" id="3_wall"]
 [ext_resource type="PackedScene" uid="uid://btgai87vf6q1s" path="res://assets/models/furniture/wallWindow.glb" id="4_wallwindow"]
@@ -16,6 +15,14 @@
 [ext_resource type="PackedScene" uid="uid://b1qnigrqrboij" path="res://assets/models/furniture/pottedPlant.glb" id="13_plant"]
 [ext_resource type="PackedScene" uid="uid://dwdkkh6i3t3xx" path="res://assets/models/furniture/books.glb" id="14_books"]
 [ext_resource type="PackedScene" uid="uid://c8xr2m5k7h3np" path="res://scenes/character/player_character.tscn" id="15_player"]
+[ext_resource type="Script" uid="uid://cpawxsitqkle8" path="res://scenes/interior/camera_rig.gd" id="16_camera_rig"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_1"]
+geometry_parsed_geometry_type = 1
+cell_size = 0.1
+cell_height = 0.1
+agent_height = 1.0
+agent_radius = 0.3
 
 [sub_resource type="Environment" id="Environment_1"]
 background_mode = 1
@@ -29,20 +36,10 @@ tonemap_white = 6.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_1"]
 size = Vector3(4, 0.1, 4)
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_1"]
-vertices = PackedVector3Array()
-polygons = []
-agent_height = 1.0
-agent_radius = 0.3
-cell_size = 0.1
-cell_height = 0.1
-geometry_parsed_geometry_type = 1
-geometry_source_geometry_mode = 0
-
 [node name="InteriorScene" type="Node3D" unique_id=1594013898]
 script = ExtResource("1_script")
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1176016399]
 navigation_mesh = SubResource("NavigationMesh_1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=932483073]
@@ -177,14 +174,13 @@ collision_mask = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.023565095, 0)
 shape = SubResource("BoxShape3D_1")
 
-[node name="CameraRig" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="CameraRig" type="Node3D" parent="." unique_id=1912547631]
 script = ExtResource("16_camera_rig")
 
-[node name="InnerGimbal" type="Node3D" parent="CameraRig"]
+[node name="InnerGimbal" type="Node3D" parent="CameraRig" unique_id=346794485]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="CameraRig/InnerGimbal"]
+[node name="Camera3D" type="Camera3D" parent="CameraRig/InnerGimbal" unique_id=146191616]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 current = true
 fov = 29.7

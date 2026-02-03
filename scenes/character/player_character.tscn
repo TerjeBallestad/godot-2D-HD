@@ -40,8 +40,7 @@ cull_mask = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46500152, 0)
 shape = SubResource("CapsuleShape3D_1")
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1967948590]
 path_desired_distance = 0.3
 target_desired_distance = 0.3
 max_speed = 1.5
-avoidance_enabled = false

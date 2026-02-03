@@ -6,7 +6,7 @@ extends Node3D
 @onready var camera: Camera3D = $InnerGimbal/Camera3D
 
 # Orbit settings
-const SNAP_ANGLE: float = 45.0  # Degrees per snap position
+const SNAP_ANGLE: float = 90.0  # Degrees per snap position
 const ORBIT_TRANSITION_TIME: float = 0.3  # Seconds for smooth snap
 
 # Zoom settings
@@ -81,11 +81,11 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _rotate_camera(direction: int) -> void:
 	# direction: -1 for left (Q), +1 for right (E)
-	current_snap_index = (current_snap_index + direction) % 8
+	current_snap_index = (current_snap_index + direction) % 4
 	if current_snap_index < 0:
-		current_snap_index = 7
+		current_snap_index = 3
 
-	var target_rotation = current_snap_index * SNAP_ANGLE
+	var target_rotation = current_snap_index * SNAP_ANGLE + 45.0
 	_animate_rotation(target_rotation)
 
 
@@ -95,8 +95,8 @@ func _snap_to_nearest_angle() -> void:
 	if current_rotation < 0:
 		current_rotation += 360.0
 
-	current_snap_index = int(round(current_rotation / SNAP_ANGLE)) % 8
-	var target_rotation = current_snap_index * SNAP_ANGLE
+	current_snap_index = int(round(current_rotation / (SNAP_ANGLE + 45))) % 4
+	var target_rotation = current_snap_index * SNAP_ANGLE + 45
 
 	# Handle wrap-around for smooth animation
 	var diff = target_rotation - rotation_degrees.y
