@@ -25,7 +25,6 @@ func _ready() -> void:
 	if not camera:
 		push_error("TiltShiftController: Parent is not a Camera3D")
 		return
-	print("TiltShiftController: Found camera")
 
 	# Get shader material (from surface override on MeshInstance3D)
 	shader_material = get_surface_override_material(0) as ShaderMaterial
@@ -36,8 +35,9 @@ func _ready() -> void:
 
 	# Initialize focal point to player position
 	current_focal = player.global_position + Vector3(0, focal_height_offset, 0)
-	shader_material.set_shader_parameter("focal_point", current_focal)
-	print("TiltShiftController: Initial focal point ", current_focal)
+	var focal_view = camera.global_transform.affine_inverse() * current_focal
+	shader_material.set_shader_parameter("focal_point_view", focal_view)
+	print("TiltShiftController: Initial focal point ", current_focal, " (view: ", focal_view, ")")
 
 
 var debug_counter: int = 0
@@ -52,18 +52,14 @@ func _process(delta: float) -> void:
 	# Exponential smoothing for slight lag (frame-rate independent)
 	current_focal = current_focal.lerp(target_focal, 1.0 - exp(-focal_smoothing * delta))
 
-	shader_material.set_shader_parameter("focal_point", current_focal)
-
-	# Pass camera matrices to shader for proper depth reconstruction
-	var proj_matrix = camera.get_camera_projection()
-	var view_matrix = camera.get_camera_transform()
-	shader_material.set_shader_parameter("inv_proj_matrix", proj_matrix.inverse())
-	shader_material.set_shader_parameter("inv_view_matrix", view_matrix)
+	# Transform focal point to view space (camera space)
+	var focal_view = camera.global_transform.affine_inverse() * current_focal
+	shader_material.set_shader_parameter("focal_point_view", focal_view)
 
 	# Debug: print every 60 frames
 	debug_counter += 1
 	if debug_counter % 60 == 0:
-		print("Focal: ", current_focal, " Player: ", player.global_position)
+		print("Focal world: ", current_focal, " view: ", focal_view)
 
 
 func toggle_effect() -> void:
@@ -77,7 +73,7 @@ func cycle_debug_mode() -> void:
 		var current = shader_material.get_shader_parameter("debug_mode")
 		if current == null:
 			current = 0  # Default if not explicitly set in material
-		var next_mode = (int(current) + 1) % 3
+		var next_mode = (int(current) + 1) % 6
 		shader_material.set_shader_parameter("debug_mode", next_mode)
-		var mode_names = ["off", "distance", "depth"]
+		var mode_names = ["off", "distance", "raw_depth", "view_X", "view_Y", "linear_depth"]
 		print("Debug mode: ", mode_names[next_mode])

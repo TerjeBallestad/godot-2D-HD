@@ -73,8 +73,8 @@ size = Vector2(2, 2)
 render_priority = 0
 shader = ExtResource("18_tiltshift")
 shader_parameter/focal_point = Vector3(0, 0.5, 0)
-shader_parameter/focus_distance = 2.5
-shader_parameter/blur_max = 2.0
+shader_parameter/focus_distance = 0.6
+shader_parameter/blur_max = 1.5
 shader_parameter/blur_transition = 2.0
 shader_parameter/enabled = true
 
