@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-02)
 
 ## Current Position
 
-Phase: 3 of 5 (Controls)
-Plan: 2 of 2 in current phase (complete)
-Status: Phase complete, verified, ready for Phase 4
-Last activity: 2026-02-02 — Phase 3 verified (10/10 must-haves)
+Phase: 4 of 5 (Atmosphere)
+Plan: 1 of 4 in current phase
+Status: In progress
+Last activity: 2026-02-03 — Completed 04-01-PLAN.md (bloom & volumetric fog)
 
-Progress: [██████░░░░] 60%
+Progress: [███████░░░] 70%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
-- Average duration: ~9 min
-- Total execution time: ~0.75 hours
+- Total plans completed: 6
+- Average duration: ~8 min
+- Total execution time: ~0.8 hours
 
 **By Phase:**
 
@@ -30,10 +30,11 @@ Progress: [██████░░░░] 60%
 | 01-foundation | 2 | ~20 min | ~10 min |
 | 02-character | 1 | ~15 min | ~15 min |
 | 03-controls | 2 | ~2 min | ~1 min |
+| 04-atmosphere | 1 | ~3 min | ~3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (15 min), 02-01 (15 min), 03-01 (1 min), 03-02 (1 min)
-- Trend: Controls phase plans execute very fast (autonomous, well-specified)
+- Last 5 plans: 02-01 (15 min), 03-01 (1 min), 03-02 (1 min), 04-01 (3 min)
+- Trend: Atmosphere plans executing quickly (Environment configuration only)
 
 *Updated after each plan completion*
 
@@ -60,6 +61,8 @@ Recent decisions affecting current work:
 - **Camera gimbal pattern:** CameraRig > InnerGimbal > Camera3D hierarchy (03-02)
 - **45-degree orbit snapping:** 8 snap positions with tween animation (03-02)
 - **Zoom range:** 3.0-8.0 units with 0.5 step for scene evaluation (03-02)
+- **Emissive-only bloom:** glow_bloom=0.0 + glow_hdr_threshold=1.0 (04-01)
+- **Light shaft fog:** density=0.01 + anisotropy=0.6 for subtle rays (04-01)
 
 ### Pending Todos
 
@@ -71,6 +74,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-02
-Stopped at: Phase 3 complete and verified, ready for Phase 4 (Atmosphere)
+Last session: 2026-02-03
+Stopped at: Completed 04-01-PLAN.md (bloom & volumetric fog)
 Resume file: None
