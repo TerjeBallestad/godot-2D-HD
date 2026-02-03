@@ -105,10 +105,10 @@ Plans:
   2. Character paths around furniture when clicking on the far side
   3. Character cannot walk through solid objects
   4. Navmesh is properly baked and queried at runtime
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 06-01-PLAN.md — Restore NavigationAgent3D pathfinding with async navmesh handling
+- [ ] 06-01-PLAN.md — Restore NavigationAgent3D pathfinding with deferred setup and MESH_INSTANCES navmesh
 
 ## Progress
 
