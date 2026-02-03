@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-02)
 
 **Core value:** Visual quality must feel right when moving through the scene — go/no-go decision for Godot
-**Current focus:** Phase 5 - Tilt-Shift
+**Current focus:** Milestone complete - HD-2D evaluation ready
 
 ## Current Position
 
-Phase: 4 of 5 (Atmosphere)
-Plan: 3 of 3 in current phase (complete)
-Status: Phase complete, verified, ready for Phase 5
-Last activity: 2026-02-03 — Phase 4 verified (user approved atmosphere)
+Phase: 5 of 5 (Tilt-Shift)
+Plan: 1 of 1 in current phase (complete)
+Status: All phases complete, milestone ready for audit
+Last activity: 2026-02-03 — Phase 5 verified (user approved tilt-shift effect)
 
-Progress: [████████░░] 80%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: ~8 min
-- Total execution time: ~1.1 hours
+- Total plans completed: 9
+- Average duration: ~10 min
+- Total execution time: ~1.5 hours
 
 **By Phase:**
 
@@ -31,10 +31,11 @@ Progress: [████████░░] 80%
 | 02-character | 1 | ~15 min | ~15 min |
 | 03-controls | 2 | ~2 min | ~1 min |
 | 04-atmosphere | 3 | ~30 min | ~10 min |
+| 05-tilt-shift | 1 | ~25 min | ~25 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (1 min), 04-01 (3 min), 04-02 (1 min), 04-03 (25 min)
-- Trend: 04-03 required debugging and user iteration for atmosphere tuning
+- Last 5 plans: 04-01 (3 min), 04-02 (1 min), 04-03 (25 min), 05-01 (25 min)
+- Trend: Complex shader debugging required iteration (depth reconstruction, view-space fix)
 
 *Updated after each plan completion*
 
@@ -64,6 +65,9 @@ Recent decisions affecting current work:
 - **Emissive sprite shader:** spatial shader with EMISSION + vertex billboard (04-03)
 - **Alpha scissor for shadows:** ALPHA_SCISSOR_THRESHOLD for sprite shadow casting (04-03)
 - **User-tuned atmosphere:** bloom/fog values adjusted from plan during visual approval (04-03)
+- **Tilt-shift pattern:** View-space depth comparison (not world-space) for fullscreen quad compatibility (05-01)
+- **Focal tracking:** Exponential smoothing with focal_smoothing=5.0, height_offset=0.5 (05-01)
+- **Tuned blur parameters:** focus_distance=0.6, blur_max=1.5, blur_transition=2.0 for subtle HD-2D look (05-01)
 
 ### Pending Todos
 
@@ -76,5 +80,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-03
-Stopped at: Phase 4 complete and verified, ready for Phase 5 (Tilt-Shift)
+Stopped at: All phases complete, milestone ready for audit
 Resume file: None

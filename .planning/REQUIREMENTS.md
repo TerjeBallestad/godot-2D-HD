@@ -9,21 +9,21 @@ Requirements for the evaluation prototype. Each maps to roadmap phases.
 
 ### Rendering
 
-- [ ] **REND-01**: Depth-based tilt-shift shader with focal point following character
-- [ ] **REND-02**: Bloom/glow post-processing via WorldEnvironment
-- [ ] **REND-03**: Vignette effect (edge darkening/blur)
-- [ ] **REND-04**: Volumetric fog for interior atmosphere
+- [x] **REND-01**: Depth-based tilt-shift shader with focal point following character
+- [x] **REND-02**: Bloom/glow post-processing via WorldEnvironment
+- [x] **REND-03**: Vignette effect (edge darkening/blur)
+- [x] **REND-04**: Volumetric fog for interior atmosphere
 
 ### Sprites
 
 - [x] **SPRT-01**: Sprite3D billboard for player character
 - [x] **SPRT-02**: Pixel-art filtering (nearest-neighbor) on all sprites
-- [ ] **SPRT-03**: Point lights casting character shadows on environment
+- [x] **SPRT-03**: Point lights casting character shadows on environment
 
 ### Environment
 
-- [ ] **ENV-01**: Interior house scene built with user's pixel art assets
-- [ ] **ENV-02**: WorldEnvironment with tone mapping and ambient lighting
+- [x] **ENV-01**: Interior house scene built with user's pixel art assets
+- [x] **ENV-02**: WorldEnvironment with tone mapping and ambient lighting
 
 ### Controls
 

@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Character** - Sprite3D player with pixel-art filtering
 - [x] **Phase 3: Controls** - Click-to-move navigation and camera controls
 - [x] **Phase 4: Atmosphere** - Post-processing, volumetric fog, and lighting
-- [ ] **Phase 5: Tilt-Shift** - Depth-based DoF shader with character-following focal point
+- [x] **Phase 5: Tilt-Shift** - Depth-based DoF shader with character-following focal point
 
 ## Phase Details
 
@@ -92,7 +92,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 05-01-PLAN.md — Tilt-shift shader with depth-based blur and focal tracking
+- [x] 05-01-PLAN.md — Tilt-shift shader with depth-based blur and focal tracking
 
 ## Progress
 
@@ -105,4 +105,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 2. Character | 1/1 | Complete | 2026-02-02 |
 | 3. Controls | 2/2 | Complete | 2026-02-02 |
 | 4. Atmosphere | 3/3 | Complete | 2026-02-03 |
-| 5. Tilt-Shift | 0/1 | Not started | - |
+| 5. Tilt-Shift | 1/1 | Complete | 2026-02-03 |
