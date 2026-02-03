@@ -74,8 +74,10 @@ func toggle_effect() -> void:
 
 func cycle_debug_mode() -> void:
 	if shader_material:
-		var current: int = shader_material.get_shader_parameter("debug_mode")
-		var next_mode = (current + 1) % 3
+		var current = shader_material.get_shader_parameter("debug_mode")
+		if current == null:
+			current = 0  # Default if not explicitly set in material
+		var next_mode = (int(current) + 1) % 3
 		shader_material.set_shader_parameter("debug_mode", next_mode)
 		var mode_names = ["off", "distance", "depth"]
 		print("Debug mode: ", mode_names[next_mode])
