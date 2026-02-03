@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dwdkkh6i3t3xx" path="res://assets/models/furniture/books.glb" id="14_books"]
 [ext_resource type="PackedScene" uid="uid://c8xr2m5k7h3np" path="res://scenes/character/player_character.tscn" id="15_player"]
 [ext_resource type="Script" uid="uid://cpawxsitqkle8" path="res://scenes/interior/camera_rig.gd" id="16_camera_rig"]
+[ext_resource type="Shader" path="res://shaders/vignette.gdshader" id="17_vignette"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_1"]
 geometry_parsed_geometry_type = 1
@@ -57,6 +58,14 @@ volumetric_fog_temporal_reprojection_amount = 0.9
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1"]
 size = Vector3(4, 0.1, 4)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vignette"]
+shader = ExtResource("17_vignette")
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.3
+shader_parameter/vignette_color = Color(0.15, 0.1, 0.05, 1)
+shader_parameter/edge_blur_strength = 0.3
+shader_parameter/edge_blur_size = 1.5
 
 [node name="InteriorScene" type="Node3D" unique_id=1594013898]
 script = ExtResource("1_script")
@@ -208,3 +217,15 @@ current = true
 fov = 29.7
 near = 0.1
 far = 100.0
+
+[node name="PostProcessing" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="Vignette" type="ColorRect" parent="PostProcessing"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+material = SubResource("ShaderMaterial_vignette")
