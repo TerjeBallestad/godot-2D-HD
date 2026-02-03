@@ -4,6 +4,7 @@ extends Node3D
 
 @onready var inner_gimbal: Node3D = $InnerGimbal
 @onready var camera: Camera3D = $InnerGimbal/Camera3D
+@onready var tilt_shift_quad: MeshInstance3D = $InnerGimbal/Camera3D/TiltShiftQuad
 
 # Orbit settings
 const SNAP_ANGLE: float = 90.0  # Degrees per snap position
@@ -52,6 +53,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				_zoom_camera(ZOOM_STEP)  # Positive = farther
 			KEY_R:  # Reset
 				_reset_camera()
+			KEY_T:  # Toggle tilt-shift
+				_toggle_tilt_shift()
 
 	# Mouse wheel zoom
 	if event is InputEventMouseButton:
@@ -145,3 +148,8 @@ func _reset_camera() -> void:
 	# Animate both rotation and zoom
 	_animate_rotation(DEFAULT_ROTATION)
 	_animate_zoom(DEFAULT_ZOOM)
+
+
+func _toggle_tilt_shift() -> void:
+	if tilt_shift_quad and tilt_shift_quad.has_method("toggle_effect"):
+		tilt_shift_quad.toggle_effect()
