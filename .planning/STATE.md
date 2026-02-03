@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-02-02)
 
 **Core value:** Visual quality must feel right when moving through the scene — go/no-go decision for Godot
-**Current focus:** Milestone 1 complete - pathfinding gap closed
+**Current focus:** Milestone 1 complete - ready for visual evaluation
 
 ## Current Position
 
-Phase: 6 of 6 (Pathfinding)
+Phase: 6 of 6 (Pathfinding → Direct Movement)
 Plan: 1 of 1 in current phase
-Status: Phase complete - Milestone 1 complete
-Last activity: 2026-02-03 — Completed 06-01-PLAN.md (pathfinding gap closure)
+Status: Phase complete - using direct movement (pathfinding deferred)
+Last activity: 2026-02-03 — Reverted to direct movement after NavigationAgent3D issues
 
 Progress: [██████████] 100%
 
@@ -69,9 +69,7 @@ Recent decisions affecting current work:
 - **Tilt-shift pattern:** View-space depth comparison (not world-space) for fullscreen quad compatibility (05-01)
 - **Focal tracking:** Exponential smoothing with focal_smoothing=5.0, height_offset=0.5 (05-01)
 - **Tuned blur parameters:** focus_distance=0.6, blur_max=1.5, blur_transition=2.0 for subtle HD-2D look (05-01)
-- **MESH_INSTANCES navmesh parsing:** GLB furniture has no collision shapes, use geometry_parsed_geometry_type=0 (06-01)
-- **Deferred navigation setup:** call_deferred + await physics_frame for NavServer timing (06-01)
-- **Deceleration on final target:** Use navigation_agent.target_position distance for smooth stopping (06-01)
+- **Direct movement for prototype:** Pathfinding deferred - NavigationAgent3D had oscillation and navmesh baking issues; direct click-to-move sufficient for visual evaluation (06-01)
 
 ### Pending Todos
 
