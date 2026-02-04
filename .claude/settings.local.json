@@ -27,7 +27,8 @@
       "Bash(find:*)",
       "Bash(git -C /Users/godstemning/Projects/godot-2D-HD status --short)",
       "Bash(git -C /Users/godstemning/Projects/godot-2D-HD log --oneline -3)",
-      "Bash(npm view:*)"
+      "Bash(npm view:*)",
+      "Bash(godot:*)"
     ]
   }
 }

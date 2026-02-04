@@ -56,11 +56,6 @@ func _process(delta: float) -> void:
 	var focal_view = camera.global_transform.affine_inverse() * current_focal
 	shader_material.set_shader_parameter("focal_point_view", focal_view)
 
-	# Debug: print every 60 frames
-	debug_counter += 1
-	if debug_counter % 60 == 0:
-		print("Focal world: ", current_focal, " view: ", focal_view)
-
 
 func toggle_effect() -> void:
 	if shader_material:
