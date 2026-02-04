@@ -15,10 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://b1qnigrqrboij" path="res://assets/models/furniture/pottedPlant.glb" id="13_plant"]
 [ext_resource type="PackedScene" uid="uid://dwdkkh6i3t3xx" path="res://assets/models/furniture/books.glb" id="14_books"]
 [ext_resource type="PackedScene" uid="uid://c8xr2m5k7h3np" path="res://scenes/character/player_character.tscn" id="15_player"]
-[ext_resource type="Script" uid="uid://cpawxsitqkle8" path="res://scenes/interior/camera_rig.gd" id="16_camera_rig"]
+[ext_resource type="Script" path="res://scenes/interior/camera_rig.gd" id="16_camera_rig"]
 [ext_resource type="Shader" uid="uid://bhrbe8eown4ar" path="res://shaders/vignette.gdshader" id="17_vignette"]
 [ext_resource type="Shader" uid="uid://bm2schfysj5y3" path="res://shaders/tilt_shift.gdshader" id="18_tiltshift"]
-[ext_resource type="Script" uid="uid://6nm0npavdeap" path="res://scenes/interior/tilt_shift_controller.gd" id="19_tiltshift_controller"]
+[ext_resource type="Script" path="res://scenes/interior/tilt_shift_controller.gd" id="19_tiltshift_controller"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_1"]
 geometry_parsed_geometry_type = 0
@@ -29,7 +29,7 @@ filter_walkable_low_height_spans = true
 
 [sub_resource type="Environment" id="Environment_1"]
 background_mode = 1
-background_color = Color(0.15, 0.15, 0.18, 1)
+background_color = Color(0.31207794, 0.5340672, 0.57642704, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.6, 0.55, 0.5, 1)
 ambient_light_energy = 0.61
@@ -49,7 +49,7 @@ glow_blend_mode = 0
 fog_enabled = true
 fog_light_color = Color(0.2252262, 0.07481218, 0.35061356, 1)
 fog_light_energy = 0.86
-fog_density = 0.109
+fog_density = 0.08
 fog_sky_affect = 0.0
 volumetric_fog_density = 0.09
 volumetric_fog_albedo = Color(0.9, 0.9, 0.9, 1)
@@ -58,7 +58,7 @@ volumetric_fog_emission_energy = 0.1
 volumetric_fog_gi_inject = 0.1
 volumetric_fog_anisotropy = 0.6
 adjustment_enabled = true
-adjustment_brightness = 0.88
+adjustment_brightness = 1.19
 adjustment_contrast = 1.03
 adjustment_saturation = 1.14
 
